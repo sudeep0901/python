@@ -11,22 +11,7 @@ from pprint import pprint
 print(sys.version)
 sys.version_info
 
-
-# In[39]:
-
-
-# Running command and receiving output from python
-# Ask the user for input
-host = input("Enter a host to ping: ")
-
-# Set up the echo command and direct the output to a pipe
-p1 = subprocess.Popen(['ping', '-a', host], stdout=subprocess.PIPE)
-
-stdout, stderr = p1.communicate()
-print(stdout, stderr)
-
 names = ['sudeep', 'Mike', 'Dhanesh', 'Manasvi']
-
 
 # In[34]:
 
@@ -60,7 +45,7 @@ age = 34
 
 # In[44]:
 
-
+ 
 # Use str.format - Instead
 "Hello man {}, How are you doing? {}".format(name, "I am doing fine")
 
@@ -74,3 +59,17 @@ age = 34
 # In[48]:
 person = {'name': 'sudeep', 'greeting': 'i am fine'}
 "Hello man {name}, How are you doing? {greeting}".format(**person)
+
+# using f-strings
+
+f"Hello {name} {'i am dloing fine'}"
+
+
+def to_uppercase(input):
+    return input.upper()
+
+# can call functions also in format string
+f"Hello {to_uppercase(name)}"
+
+import timeit
+timeit.timeit(""" name = "Sudeep" age = 34 '%s is %s.' % (name, age)""", number=10000 )
