@@ -4,6 +4,7 @@
 # In[14]:
 
 
+import timeit
 import os
 import subprocess
 import sys
@@ -45,7 +46,7 @@ age = 34
 
 # In[44]:
 
- 
+
 # Use str.format - Instead
 "Hello man {}, How are you doing? {}".format(name, "I am doing fine")
 
@@ -68,8 +69,9 @@ f"Hello {name} {'i am dloing fine'}"
 def to_uppercase(input):
     return input.upper()
 
+
 # can call functions also in format string
 f"Hello {to_uppercase(name)}"
 
-import timeit
-timeit.timeit(""" name = "Sudeep" age = 34 '%s is %s.' % (name, age)""", number=10000 )
+timeit.timeit(
+    """ name = "Sudeep" age = 34 '%s is %s.' % (name, age)""", number=10000)
