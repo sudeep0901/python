@@ -18,7 +18,7 @@ student = {}
 
 
 def add_student(name, student_id=100):
-    student = {"name": name, "student_id": student_id}
+    student = {"name": name, "student_id":  student_id}
     students.append(student)
 
 

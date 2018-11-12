@@ -23,3 +23,30 @@ print(next(read_generator))
 print(next(read_generator))
 print(next(read_generator))
 print(next(read_generator))
+
+
+data = [{
+        "name": "sudeep"
+        },
+        {
+        "name": "sudeep1"
+        },
+        {
+        "name": "sudeep2"
+        }]
+
+
+def ret_data(data):
+    for name in data:
+        yield name
+
+
+get_data = ret_data(data)
+
+print(next(get_data))
+print(next(get_data))
+print(next(get_data))
+
+
+for val in get_data:
+    print(val)
