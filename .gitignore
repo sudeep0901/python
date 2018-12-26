@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 .ipynb_checkpoints
 data/.DS_Store
 currentdirectory.txt
+=======
+.settings
+.project
+.pydevproject
+>>>>>>> python continued
