@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 .ipynb_checkpoints
 data/.DS_Store
 currentdirectory.txt
+<<<<<<< HEAD
 .vscode/settings.json
 .vscode/settings.json
+=======
+=======
+.settings
+.project
+.pydevproject
+>>>>>>> python continued
+>>>>>>> 6e9fe45d27d3302222cc83725096bec3448c3c0f
