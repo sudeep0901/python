@@ -35,6 +35,7 @@ def mydecorator(func):
         func()
         print(func.__globals__)
         print("Somehting more interesting")
+       
     return wrapper
 
 
@@ -44,6 +45,33 @@ def say_hi():
 
 print(say_hi)
 
+
 say_hi = mydecorator(say_hi)
 
-say_hi()
+from datetime import datetime
+
+def not_during_night(func):
+    def wrapper():
+        print(datetime.now(), datetime.now().hour)
+        if 7 <= datetime.now().hour < 22:
+            func()
+        else:
+            pass
+    return wrapper
+
+# So, @my_decorator is just an easier way of saying say_whee = my_decorator(say_whee). It’s how you apply a decorator to a function.
+
+
+@not_during_night
+def say_whee():
+    print("do not run at night")
+
+say_whee = not_during_night(say_whee)
+say_whee();
+
+say_whee()
+
+
+
+# decorator with parameters
+
