@@ -4,10 +4,21 @@
 # (which are known as properties).
 
 # Instances of a class are created by calling a class object as a function
-
+import datetime
+import time
+import dateutil
 
 class Employee(object):
     classvariable = "I am global"
+
+    # A static method is an ordinary function that just happens to live in the namespace
+# defined by a class. It does not operate on any kind of instance.To define a static
+# method, use the @staticmethod decorator as shown here:
+# class Foo
+    @staticmethod
+    def checemployee():
+        print("sttic method to check exiting employee while creating")
+
     def __init__(self, fname, lname):
         print("Init method initializing vars .. . . . .")
         self.fname = fname
@@ -40,9 +51,24 @@ class EvilEmployee(Employee): #Inheritance
 
     def evil(self):
         return self.evilFactor
+    
+    @staticmethod
+    def now():
+        t = time.localtime()
+        return Date(t.tm_year, t.tm_mon, t.tm_day)
+        
+    @staticmethod
+    def tomorrow():
+        t = time.localtime(time.time()+86400)
+        return Date(t.tm_year, t.tm_mon, t.tm_day)
 
 
 eve = EvilEmployee("Sudeep", "Patel", "No")
 
 print(eve.evil(),eve.printfullname())
+employee.checemployee()
+EvilEmployee.now()
+# For any given class, the ordering of base classes can be viewed by printing
+# its __mro__ attribute. Here’s an example:
 
+print(EvilEmployee.__mro__)
