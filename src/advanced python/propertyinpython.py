@@ -4,6 +4,7 @@ class propertyclass:
 
     def getvalue(self):
         print("getting value")
+        print(repr(self.__dict__))
         return self._value
 
     def setvalue(self, value):
@@ -24,4 +25,6 @@ pc = propertyclass("sudeep")
 print(pc.value)
 pc.value = 5000
 
+
 print(pc.value)
+print("getattr:" ,getattr(pc, "value"))
