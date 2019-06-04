@@ -1,7 +1,7 @@
 import nltk
 sentence = """At eight o'clock on Thursday morning
 ... Arthur didn't feel very good."""
-
+import os
 tokens = nltk.word_tokenize(sentence)
 
 print(tokens, type(tokens))
@@ -27,3 +27,4 @@ from nltk.corpus import treebank
 t = treebank.parsed_sents('wsj_0001.mrg')[0]
 t.draw()
 
+print( os.listdir(nltk.data.find("corpora")))
