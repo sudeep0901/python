@@ -161,7 +161,7 @@ NE_tokenize = word_tokenize(NE_sent)
 NE_tags = nltk.pos_tag(NE_tokenize)
 print(NE_tags)
 
-nltk.download('maxent_ne_chunker')
+nltk.download()
 
 NE_ner = ne_chunk(NE_tags)
 print(NE_ner)
