@@ -63,4 +63,4 @@ predicted = svm.predict(ycount)
 predicted
 cls_probablity = svm.predict_proba(ycount)* 100 
 cls_probablity.max(axis=1)
-print(accuracy_score(y_test , predicted))
+accuracy_score(predicted, df['TICKET_PROBLEM_SUMMARY'])
