@@ -114,3 +114,125 @@
 [Thread-26, 2019-06-02 10:44:15,639, INFO, image saved to ./incoming/pexels-photo-341520.jpeg]
 [MainThread, 2019-06-02 10:44:15,639, INFO, downloaded 26 images in 7.274501117999989 seconds]
 [MainThread, 2019-06-02 10:44:15,640, INFO, END make_thumbnails in 7.274912864999806 seconds]
+[MainThread, 2019-06-02 11:33:46,632, INFO, START make_thumbnails]
+[Thread-1, 2019-06-02 11:33:46,633, INFO, beginning image downloads]
+[Thread-2, 2019-06-02 11:33:46,633, INFO, beginning image resizing]
+[Thread-1, 2019-06-02 11:34:13,589, INFO, downloaded 26 images in 26.955948837000506 seconds]
+[MainThread, 2019-06-02 11:34:13,591, INFO, END make_thumbnails in 26.95808580799985 seconds]
+[MainThread, 2019-06-02 11:34:52,312, INFO, START make_thumbnails]
+[Thread-1, 2019-06-02 11:34:52,313, INFO, beginning image downloads]
+[Thread-2, 2019-06-02 11:34:52,314, INFO, beginning image resizing]
+[Thread-1, 2019-06-02 11:35:19,322, INFO, downloaded 26 images in 27.009106630000133 seconds]
+[Thread-2, 2019-06-02 11:35:19,322, INFO, created 26 thumbnails in 27.007470067000213 seconds]
+[MainThread, 2019-06-02 11:49:06,039, INFO] START make_thumbnails
+[Thread-5, 2019-06-02 11:49:06,043, INFO] beginning image resizing
+[Thread-5, 2019-06-02 11:49:06,898, INFO] resizing image pexels-photo-48603.jpeg
+[Thread-5, 2019-06-02 11:49:07,095, INFO] done resizing image pexels-photo-48603.jpeg
+[Thread-5, 2019-06-02 11:49:07,095, INFO] resizing image pexels-photo-135130.jpeg
+[Thread-5, 2019-06-02 11:49:07,165, INFO] done resizing image pexels-photo-135130.jpeg
+[Thread-5, 2019-06-02 11:49:07,165, INFO] resizing image pexels-photo-167300.jpeg
+[Thread-5, 2019-06-02 11:49:07,251, INFO] done resizing image pexels-photo-167300.jpeg
+[Thread-5, 2019-06-02 11:49:07,510, INFO] resizing image pexels-photo-134392.jpeg
+[Thread-5, 2019-06-02 11:49:07,606, INFO] done resizing image pexels-photo-134392.jpeg
+[Thread-5, 2019-06-02 11:49:07,789, INFO] resizing image pexels-photo-185934.jpeg
+[Thread-5, 2019-06-02 11:49:07,815, INFO] done resizing image pexels-photo-185934.jpeg
+[Thread-5, 2019-06-02 11:49:07,892, INFO] resizing image pexels-photo-173125.jpeg
+[Thread-5, 2019-06-02 11:49:07,947, INFO] done resizing image pexels-photo-173125.jpeg
+[Thread-5, 2019-06-02 11:49:07,947, INFO] resizing image pexels-photo-167921.jpeg
+[Thread-5, 2019-06-02 11:49:08,060, INFO] done resizing image pexels-photo-167921.jpeg
+[Thread-5, 2019-06-02 11:49:08,737, INFO] resizing image pexels-photo-207962.jpeg
+[Thread-5, 2019-06-02 11:49:08,758, INFO] done resizing image pexels-photo-207962.jpeg
+[Thread-5, 2019-06-02 11:49:08,815, INFO] resizing image pexels-photo-192454.jpeg
+[Thread-5, 2019-06-02 11:49:08,925, INFO] done resizing image pexels-photo-192454.jpeg
+[Thread-5, 2019-06-02 11:49:08,973, INFO] resizing image pexels-photo-193043.jpeg
+[Thread-5, 2019-06-02 11:49:09,098, INFO] done resizing image pexels-photo-193043.jpeg
+[Thread-5, 2019-06-02 11:49:09,098, INFO] resizing image pexels-photo-193038.jpeg
+[Thread-5, 2019-06-02 11:49:09,201, INFO] done resizing image pexels-photo-193038.jpeg
+[Thread-5, 2019-06-02 11:49:09,715, INFO] resizing image pexels-photo-247917.jpeg
+[Thread-5, 2019-06-02 11:49:09,785, INFO] done resizing image pexels-photo-247917.jpeg
+[Thread-5, 2019-06-02 11:49:09,816, INFO] resizing image pexels-photo-265186.jpeg
+[Thread-5, 2019-06-02 11:49:09,900, INFO] done resizing image pexels-photo-265186.jpeg
+[Thread-5, 2019-06-02 11:49:09,900, INFO] resizing image pexels-photo-247932.jpeg
+[Thread-5, 2019-06-02 11:49:10,014, INFO] done resizing image pexels-photo-247932.jpeg
+[Thread-5, 2019-06-02 11:49:10,014, INFO] resizing image pexels-photo-302899.jpeg
+[Thread-5, 2019-06-02 11:49:10,136, INFO] done resizing image pexels-photo-302899.jpeg
+[Thread-5, 2019-06-02 11:49:10,691, INFO] resizing image pexels-photo-317156.jpeg
+[Thread-5, 2019-06-02 11:49:10,790, INFO] done resizing image pexels-photo-317156.jpeg
+[Thread-5, 2019-06-02 11:49:10,791, INFO] resizing image pexels-photo-320007.jpeg
+[Thread-5, 2019-06-02 11:49:10,869, INFO] done resizing image pexels-photo-320007.jpeg
+[Thread-5, 2019-06-02 11:49:10,885, INFO] resizing image pexels-photo-317383.jpeg
+[Thread-5, 2019-06-02 11:49:11,013, INFO] done resizing image pexels-photo-317383.jpeg
+[Thread-5, 2019-06-02 11:49:11,013, INFO] resizing image pexels-photo-322207.jpeg
+[Thread-5, 2019-06-02 11:49:11,110, INFO] done resizing image pexels-photo-322207.jpeg
+[Thread-5, 2019-06-02 11:49:11,613, INFO] resizing image pexels-photo-323503.jpeg
+[Thread-5, 2019-06-02 11:49:11,715, INFO] done resizing image pexels-photo-323503.jpeg
+[Thread-5, 2019-06-02 11:49:11,715, INFO] resizing image pexels-photo-324030.jpeg
+[Thread-5, 2019-06-02 11:49:11,794, INFO] done resizing image pexels-photo-324030.jpeg
+[Thread-5, 2019-06-02 11:49:11,794, INFO] resizing image pexels-photo-324655.jpeg
+[Thread-5, 2019-06-02 11:49:11,856, INFO] done resizing image pexels-photo-324655.jpeg
+[Thread-5, 2019-06-02 11:49:12,274, INFO] resizing image pexels-photo-324658.jpeg
+[Thread-5, 2019-06-02 11:49:12,369, INFO] done resizing image pexels-photo-324658.jpeg
+[Thread-5, 2019-06-02 11:49:12,529, INFO] resizing image pexels-photo-333529.jpeg
+[Thread-5, 2019-06-02 11:49:12,604, INFO] done resizing image pexels-photo-333529.jpeg
+[Thread-5, 2019-06-02 11:49:12,604, INFO] resizing image pexels-photo-325520.jpeg
+[Thread-5, 2019-06-02 11:49:12,700, INFO] done resizing image pexels-photo-325520.jpeg
+[Thread-5, 2019-06-02 11:49:13,543, INFO] resizing image pexels-photo-341520.jpeg
+[Thread-5, 2019-06-02 11:49:13,637, INFO] done resizing image pexels-photo-341520.jpeg
+[Thread-5, 2019-06-02 11:49:13,637, INFO] created 26 thumbnails in 7.593077327999708 seconds
+[MainThread, 2019-06-02 11:49:13,637, INFO] END make_thumbnails in 7.597989883999617 seconds
+[MainThread, 2019-06-02 11:50:20,310, INFO] START make_thumbnails
+[Thread-5, 2019-06-02 11:50:20,319, INFO] beginning image resizing
+[Thread-5, 2019-06-02 11:50:21,191, INFO] resizing image pexels-photo-48603.jpeg
+[Thread-5, 2019-06-02 11:50:21,267, INFO] done resizing image pexels-photo-48603.jpeg
+[Thread-5, 2019-06-02 11:50:21,267, INFO] resizing image pexels-photo-134392.jpeg
+[Thread-5, 2019-06-02 11:50:21,386, INFO] done resizing image pexels-photo-134392.jpeg
+[Thread-5, 2019-06-02 11:50:21,386, INFO] resizing image pexels-photo-135130.jpeg
+[Thread-5, 2019-06-02 11:50:21,466, INFO] done resizing image pexels-photo-135130.jpeg
+[Thread-5, 2019-06-02 11:50:21,466, INFO] resizing image pexels-photo-167300.jpeg
+[Thread-5, 2019-06-02 11:50:21,570, INFO] done resizing image pexels-photo-167300.jpeg
+[Thread-5, 2019-06-02 11:50:22,074, INFO] resizing image pexels-photo-185934.jpeg
+[Thread-5, 2019-06-02 11:50:22,101, INFO] done resizing image pexels-photo-185934.jpeg
+[Thread-5, 2019-06-02 11:50:22,195, INFO] resizing image pexels-photo-173125.jpeg
+[Thread-5, 2019-06-02 11:50:22,250, INFO] done resizing image pexels-photo-173125.jpeg
+[Thread-5, 2019-06-02 11:50:22,409, INFO] resizing image pexels-photo-192454.jpeg
+[Thread-5, 2019-06-02 11:50:22,518, INFO] done resizing image pexels-photo-192454.jpeg
+[Thread-5, 2019-06-02 11:50:22,615, INFO] resizing image pexels-photo-167921.jpeg
+[Thread-5, 2019-06-02 11:50:22,736, INFO] done resizing image pexels-photo-167921.jpeg
+[Thread-5, 2019-06-02 11:50:23,067, INFO] resizing image pexels-photo-193038.jpeg
+[Thread-5, 2019-06-02 11:50:23,188, INFO] done resizing image pexels-photo-193038.jpeg
+[Thread-5, 2019-06-02 11:50:23,189, INFO] resizing image pexels-photo-193043.jpeg
+[Thread-5, 2019-06-02 11:50:23,298, INFO] done resizing image pexels-photo-193043.jpeg
+[Thread-5, 2019-06-02 11:50:23,298, INFO] resizing image pexels-photo-207962.jpeg
+[Thread-5, 2019-06-02 11:50:23,317, INFO] done resizing image pexels-photo-207962.jpeg
+[Thread-5, 2019-06-02 11:50:23,711, INFO] resizing image pexels-photo-247917.jpeg
+[Thread-5, 2019-06-02 11:50:23,772, INFO] done resizing image pexels-photo-247917.jpeg
+[Thread-5, 2019-06-02 11:50:24,165, INFO] resizing image pexels-photo-265186.jpeg
+[Thread-5, 2019-06-02 11:50:24,242, INFO] done resizing image pexels-photo-265186.jpeg
+[Thread-5, 2019-06-02 11:50:24,242, INFO] resizing image pexels-photo-247932.jpeg
+[Thread-5, 2019-06-02 11:50:24,341, INFO] done resizing image pexels-photo-247932.jpeg
+[Thread-5, 2019-06-02 11:50:24,341, INFO] resizing image pexels-photo-302899.jpeg
+[Thread-5, 2019-06-02 11:50:24,454, INFO] done resizing image pexels-photo-302899.jpeg
+[Thread-5, 2019-06-02 11:50:24,644, INFO] resizing image pexels-photo-317156.jpeg
+[Thread-5, 2019-06-02 11:50:24,738, INFO] done resizing image pexels-photo-317156.jpeg
+[Thread-5, 2019-06-02 11:50:24,994, INFO] resizing image pexels-photo-320007.jpeg
+[Thread-5, 2019-06-02 11:50:25,059, INFO] done resizing image pexels-photo-320007.jpeg
+[Thread-5, 2019-06-02 11:50:25,310, INFO] resizing image pexels-photo-317383.jpeg
+[Thread-5, 2019-06-02 11:50:25,441, INFO] done resizing image pexels-photo-317383.jpeg
+[Thread-5, 2019-06-02 11:50:25,441, INFO] resizing image pexels-photo-322207.jpeg
+[Thread-5, 2019-06-02 11:50:25,546, INFO] done resizing image pexels-photo-322207.jpeg
+[Thread-5, 2019-06-02 11:50:25,566, INFO] resizing image pexels-photo-323503.jpeg
+[Thread-5, 2019-06-02 11:50:25,662, INFO] done resizing image pexels-photo-323503.jpeg
+[Thread-5, 2019-06-02 11:50:25,899, INFO] resizing image pexels-photo-324030.jpeg
+[Thread-5, 2019-06-02 11:50:25,983, INFO] done resizing image pexels-photo-324030.jpeg
+[Thread-5, 2019-06-02 11:50:26,819, INFO] resizing image pexels-photo-324658.jpeg
+[Thread-5, 2019-06-02 11:50:26,942, INFO] done resizing image pexels-photo-324658.jpeg
+[Thread-5, 2019-06-02 11:50:26,942, INFO] resizing image pexels-photo-325520.jpeg
+[Thread-5, 2019-06-02 11:50:27,070, INFO] done resizing image pexels-photo-325520.jpeg
+[Thread-5, 2019-06-02 11:50:27,070, INFO] resizing image pexels-photo-324655.jpeg
+[Thread-5, 2019-06-02 11:50:27,138, INFO] done resizing image pexels-photo-324655.jpeg
+[Thread-5, 2019-06-02 11:50:27,649, INFO] resizing image pexels-photo-333529.jpeg
+[Thread-5, 2019-06-02 11:50:27,727, INFO] done resizing image pexels-photo-333529.jpeg
+[Thread-5, 2019-06-02 11:50:27,788, INFO] resizing image pexels-photo-341520.jpeg
+[Thread-5, 2019-06-02 11:50:27,886, INFO] done resizing image pexels-photo-341520.jpeg
+[Thread-5, 2019-06-02 11:50:27,886, INFO] created 0 thumbnails in 7.566100013000323 seconds
+[MainThread, 2019-06-02 11:50:27,886, INFO] END make_thumbnails in 7.575453164999999 seconds
