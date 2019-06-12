@@ -120,7 +120,7 @@ def find_paths(g , source, dest ,paths):
     visited[source] = 0
 
 
-# find_paths(g , source, dest, paths)
+find_paths(g , source, dest, paths)
 
 directedgraph = AdjacencyMatrixGraph(9,True)
 
