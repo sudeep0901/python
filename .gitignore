@@ -15,3 +15,5 @@ currentdirectory.txt
 *.csv
 .vscode
 
+pagesource.txt
+django-env
