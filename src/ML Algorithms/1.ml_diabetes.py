@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # https://github.com/JerryKurata/MachineLearningWithPython/
 
 
-diabetes_data = pd.read_csv(r'D:\github\python\src\ML Algorithms\1.ml.pima-data.csv')
+diabetes_data = pd.read_csv(r'src/ML Algorithms/1.ml.pima-data.csv')
 # ticket_data = pd.read_csv(r'D:\svnTicketDispatcher\Inex Ticket Dispatcher\data\Inex Remedy Ticket Dump - July to May19\working\1.Inex Ticket Data Merged - July18 to May19.csv')
 diabetes_data.head()    
 print(diabetes_data.shape)
