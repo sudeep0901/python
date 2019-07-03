@@ -26,15 +26,23 @@ trainingPositiveReviews = negativeReviews[:testTrainingSplitIndex]
 trainingNegativeReviews = positiveReviews[:testTrainingSplitIndex]
 
 import itertools as it
+
 def getVocublary():
     positiveWordList = [word for line in trainingPositiveReviews for word in line.split()]
     negativeWordList = [word for line in trainingNegativeReviews for word in line.split()]
     allWordList = [item for sublist in [positiveWordList,negativeWordList] for item in sublist]
-    allWordList1 = [item for item in it.chain([positiveWordList,negativeWordList])]
+    # allWordList1 = [item for item in it.chain([positiveWordList,negativeWordList])]
     allWordSet = list(set(allWordList))
     vocabulary = allWordSet
+    return vocabulary
 
+trainingdata = getVocublary()
 
+def getTrainingData():
+    negTaggedTrainingReviewList = [{'review': oneReview.split(),'label':'negative'} for oneReview in trainingdata]
+    posTaggedTrainingReviewList = [{'review': oneReview.split(),'label':'positive'} for oneReview in trainingdata]
+
+    fullTaggedTraingData = [item for sublist in [negTaggedTrainingReviewList,posTaggedTrainingReviewList] or item in sublist]
 def superNaiveSentiment(review):
     reviewPolarity =0.0
     numExceptions = 0
