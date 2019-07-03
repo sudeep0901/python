@@ -30,3 +30,7 @@ django admin site
     register new models game, move to admin.py and start site
     create a user first
         py manage.py createsuperuser
+
+To customize admin option
+
+https://docs.djangoproject.com/en/1.11/ref/contrib/admin/
