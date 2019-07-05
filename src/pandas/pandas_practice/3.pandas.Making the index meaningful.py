@@ -46,3 +46,10 @@ movie2.columns
 
 # delete a column
 del movie2['my_likes']
+
+
+# convert a column in dataframe to str
+# df['A'] = df['A'].apply(str)
+# whole dataframe
+# df.applymap(str)
+# df[0].astype(str)
