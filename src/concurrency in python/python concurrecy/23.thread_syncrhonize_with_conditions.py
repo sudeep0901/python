@@ -19,13 +19,14 @@ def consumer(cond):
         cond.wait()
         logging.debug("resource is available to consumer")
 
+
 def otherwaiting(cond):
     logging.debug("start the processsing")
     t = threading.currentThread()
     with cond:
         cond.wait()
         logging.debug("i am starting as got the green")
-        
+
 
 def producer(cond):
     """set up the resource to be used by the consumer"""
@@ -33,9 +34,11 @@ def producer(cond):
     with cond:
         logging.debug('Making resource available')
         import time
-        logging.debug("working on my task and once complete with notify others to start")
+        logging.debug(
+            "working on my task and once complete with notify others to start")
         time.sleep(10)
         cond.notifyAll()
+
 
 # creating condition object
 condition = threading.Condition()

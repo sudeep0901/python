@@ -1,5 +1,6 @@
-print("I am executing program from director")
 import sys
-print(sys.path)
-
 import package1
+
+print("I am executing program from director")
+
+print(sys.path)

@@ -1,4 +1,5 @@
-# To initialize the settings so all threads start with the same value, use a subclass and set the attributes in __init__().
+# To initialize the settings so all threads start with the same value, use a subclass 
+# and set the attributes in __init__().
 import random
 import threading
 import logging
@@ -16,15 +17,18 @@ def show_value(data):
     else:
         logging.debug('value=%s', val)
 
+
 def worker(data):
     show_value(data)
     data.value = random.randint(1, 100)
     show_value(data)
 
+
 class MyLocal(threading.local):
     def __init__(self, value):
         logging.debug('Initializing %r', self)
         self.value = value
+
 
 local_data = MyLocal(1000)
 show_value(local_data)

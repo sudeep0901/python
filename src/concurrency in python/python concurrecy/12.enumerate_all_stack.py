@@ -1,7 +1,7 @@
 def UpDataShare():
     thread = []
     MaxThread = 3
-    num=0
+    num = 0
     code = Tools().GetShareCode()
     for x in code:
         y = threading.Thread(target=ChildThead, args=(x,))
@@ -17,4 +17,4 @@ def UpDataShare():
                     num = num + 1
                     break
     except:
-        print "1223" 
+        print "1223"

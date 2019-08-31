@@ -1,6 +1,6 @@
-# The Queue module provides a FIFO implementation suitable for multi-threaded programming. 
-# It can be used to pass messages or other data between producer and consumer threads safely. 
-# Locking is handled for the caller, so it is simple to have as many threads as you want working with the same Queue instance. 
+# The Queue module provides a FIFO implementation suitable for multi-threaded programming.
+# It can be used to pass messages or other data between producer and consumer threads safely.
+# Locking is handled for the caller, so it is simple to have as many threads as you want working with the same Queue instance.
 # A Queue’s size (number of elements) may be restricted to throttle memory usage or processing.
 
 import queue
@@ -23,6 +23,7 @@ q = queue.Queue()
 #     # time.sleep(2)
 #     print(q.get())
 
+
 def rcvDataQueue(q):
     while True:
         logging.debug("waiting for data trigger")
@@ -35,10 +36,11 @@ def sendDataQueue(q):
         time.sleep(1)
         q.put(random.randint(1, 100))
 
-sender = threading.Thread(target=sendDataQueue, args = (q,))
-receiver = threading.Thread(target=rcvDataQueue, args = (q,))
-sender.setDaemon =True
-receiver.setDaemon =True
+
+sender = threading.Thread(target=sendDataQueue, args=(q,))
+receiver = threading.Thread(target=rcvDataQueue, args=(q,))
+sender.setDaemon = True
+receiver.setDaemon = True
 q.put(10)
 sender.start()
 receiver.start()

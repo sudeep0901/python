@@ -1,4 +1,4 @@
-# While some resources need to be locked so multiple threads can use them, 
+# While some resources need to be locked so multiple threads can use them,
 # others need to be protected so that they are hidden from view in threads that do not “own” them. The local() function creates an object capable of hiding values from view in separate threads.
 
 import random
@@ -17,6 +17,7 @@ def show_value(data):
         logging.debug('No value yet')
     else:
         logging.debug('value=%s', val)
+
 
 def worker(data):
     show_value(data)

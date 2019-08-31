@@ -1,6 +1,8 @@
 import sys
 
 print(sys.version)
+
+
 class NoAttributesClassMeta(type):
     def __setattr__(cls, name, value):
         if name not in cls.__dict__:
@@ -11,11 +13,13 @@ class NoAttributesClassMeta(type):
 # violates SRP signle responsinilty principle
 # NON STATNDARD Clas
 # hard to test
-# carry global state 
+# carry global state
 # signleton also called as antipattern
+
+
 class Singleton(metaclass=NoAttributesClassMeta):
     ans = None
-     
+
     @staticmethod
     def instance():
         if "_instance" not in Singleton.__dict__:

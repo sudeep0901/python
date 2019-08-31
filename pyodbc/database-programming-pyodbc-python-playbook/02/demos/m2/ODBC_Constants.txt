@@ -1,0 +1,5 @@
+Constant values (use the browser Find function):
+https://github.com/Microsoft/ODBC-Specification/blob/master/Windows/inc/sqlext.h
+
+Explanation of settings:
+https://docs.microsoft.com/en-us/sql/odbc/reference/syntax/sqlsetconnectattr-function

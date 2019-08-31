@@ -75,3 +75,6 @@ f"Hello {to_uppercase(name)}"
 
 timeit.timeit(
     """ name = "Sudeep" age = 34 '%s is %s.' % (name, age)""", number=10000)
+
+
+#%%

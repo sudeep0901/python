@@ -1,0 +1,20 @@
+Python: 
+https://www.python.org/downloads/release/python-372/
+
+SQL Server ODBC driver
+https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server
+
+Visual Studio Code
+https://code.visualstudio.com/
+
+SQL Server 2017 - Express (or Developer)
+https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+
+SQL Server sample "WideWorldImporters" database
+https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0
+
+SQL Server Management Studio
+[OPTIONAL FOR SQL INSTEAD OF VSCODE] https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms
+
+Full Pyodbc documentation can be found in:
+https://github.com/mkleehammer/pyodbc/wiki

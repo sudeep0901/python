@@ -1,3 +1,5 @@
+from memory_profiler import profile
+
 byte_array = bytearray("XYZ", "utf-8")
 print("Before update:", byte_array)
 
@@ -5,7 +7,6 @@ mem_view = memoryview(byte_array)
 print(type(mem_view))
 mem_view[2] = 74
 print("After update:", byte_array)
-from memory_profiler import profile
 
 
 @profile
@@ -22,7 +23,7 @@ def read_random():
         # for c in ba:
         #     print(chr(c), int(c))
         # print("".join(map(chr,ba)))
-        print(ba1,"".join(map(chr,ba1)))
+        print(ba1, "".join(map(chr, ba1)))
 
 
         # content_to_write = content[1024:]

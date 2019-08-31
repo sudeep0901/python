@@ -7,6 +7,7 @@ logging.basicConfig(level=logging.DEBUG,
                     format='(%(threadName)-10s) %(message)s',
                     )
 
+
 def worker():
     """thread worker function"""
     print("Locals values to thread:", threading.local())
@@ -23,7 +24,7 @@ def worker():
 for i in range(1, 3):
     t = threading.Thread(target=worker)
     print(threading.currentThread().getName())
-    t.setDaemon =  True
+    t.setDaemon = True
     t.start()
 
 main_thread = threading.currentThread()
@@ -31,8 +32,7 @@ for threadId, stack in sys._current_frames().items():
     print("thread id: ", threadId, stack)
 
 print(main_thread.getName())
-print("total active theads: " , threading.active_count())
-
+print("total active theads: ", threading.active_count())
 
 
 for t in threading.enumerate():

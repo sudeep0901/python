@@ -5,7 +5,8 @@ import time
 logging.basicConfig(level=logging.DEBUG,
                     format='(%(threadName)-10s) %(message)s',
                     )
-                    
+
+
 def lock_holder(lock):
     logging.debug('Starting')
     while True:
@@ -18,7 +19,8 @@ def lock_holder(lock):
             lock.release()
         time.sleep(0.5)
     return
-                    
+
+
 def worker(lock):
     logging.debug('Starting')
     num_tries = 0

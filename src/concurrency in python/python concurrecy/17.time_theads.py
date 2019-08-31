@@ -6,9 +6,11 @@ logging.basicConfig(level=logging.DEBUG,
                     format='(%(threadName)-10s) %(message)s',
                     )
 
+
 def delayed():
     logging.debug('worker')
     return
+
 
 t1 = threading.Timer(100, delayed)
 t1.setName("t1")
@@ -24,4 +26,3 @@ time.sleep(2)
 logging.debug('canceling %s', t2.getName())
 t2.cancel()
 logging.debug('done')
-

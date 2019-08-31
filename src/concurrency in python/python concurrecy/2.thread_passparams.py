@@ -1,7 +1,9 @@
 import threading
 import time
+
+
 def worker(num):
-    print("worker" , num)
+    print("worker", num)
     time.sleep(2)
     return
 threads = []

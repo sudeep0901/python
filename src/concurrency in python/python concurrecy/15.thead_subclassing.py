@@ -2,7 +2,9 @@
 import threading
 import logging
 
-logging.basicConfig(level=logging.DEBUG,format='(%(threadName)-10s) %(message)s',)
+logging.basicConfig(level=logging.DEBUG,
+                    format='(%(threadName)-10s) %(message)s',)
+
 
 class MyThreadWithArgs(threading.Thread):
 
@@ -13,9 +15,9 @@ class MyThreadWithArgs(threading.Thread):
     #     lcl.initialize = "Hello i initialized constructor"
 
     #     return
-    
-    def __init__(self, group=None, target=None, name=None,args=(), kwargs=None, verbose=None):
-        threading.Thread.__init__(self, group=group, target=target, name=name)    
+
+    def __init__(self, group=None, target=None, name=None, args=(), kwargs=None, verbose=None):
+        threading.Thread.__init__(self, group=group, target=target, name=name)
         self.args = args
         self.kwargs = kwargs
         self._target = target
@@ -26,13 +28,14 @@ class MyThreadWithArgs(threading.Thread):
         self._target()
         return
 
+
 def worker():
     print("target executing subclass")
+
 
 for i in range(5):
     print(globals())
     print(locals())
 
-    t = MyThreadWithArgs(target=worker,args=(i,), kwargs={'a':'A','b':'B'})
+    t = MyThreadWithArgs(target=worker, args=(i,), kwargs={'a': 'A', 'b': 'B'})
     t.start()
-

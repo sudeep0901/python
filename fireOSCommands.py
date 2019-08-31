@@ -24,3 +24,5 @@ p1 = subprocess.Popen(['ping', '-a', host], stdout=subprocess.PIPE)
 
 stdout, stderr = p1.communicate()
 print(stdout, stderr)
+
+#%%

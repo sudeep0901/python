@@ -1,9 +1,11 @@
 from functools import partial
 
+
 def multiplier(x, y):
     """Multiplier doc string."""
     print(x, y)
     return x * y
+
 
 double = partial(multiplier, 2)
 triple = partial(multiplier, 3)
