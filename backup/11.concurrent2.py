@@ -25,4 +25,5 @@ if __name__ == "__main__":
     
     task = executor.submit(list(map(double, values)))
     print(results)
-
+    # print(type())
+    
