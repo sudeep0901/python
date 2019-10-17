@@ -41,6 +41,7 @@ plt.scatter(data_projected[:, 0], data_projected[:, 1], c=digits.target,
             cmap=plt.cm.get_cmap('plasma', 10))
 plt.colorbar(label='digit label', ticks=range(10))
 plt.clim(-0.5, 9.5);
+plt.show()
 
 
 # Classification on digits¶
@@ -81,3 +82,4 @@ for i, ax in enumerate(axes.flat):
     ax.text(0.05, 0.05, str(y_model[i]),
             transform=ax.transAxes,
             color='green' if (ytest[i] == y_model[i]) else 'red')
+plt.show()
