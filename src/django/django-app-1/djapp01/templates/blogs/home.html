@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<h1 class=''>Welcome  {{user.username}}</h1>
+<div class="container">
+        {% comment %} <p class="lead">Jumbo helper text</p> {% endcomment %}
+        {% comment %} <hr class="my-2"> {% endcomment %}
+        {% comment %} <p>More info</p> {% endcomment %}
+        {% comment %} <p class="lead"> {% endcomment %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Blog ID</th>
+                    <th>Topic</th>
+                    <th>Created By</th>
+                    <th>Created Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for g in blog_header %}
+                <tr>
+                    <td scope="row">{{g.id}}</td>
+                    <td>{{g.topic}}</td>
+                    <td>{{g.blog_created_by}}</td>
+                    <td>{{g.CreatedDate}}</td>
+                    <td><a class="nav-link active" href=" {{g.id}}">Detail</a>
+                    </td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+           
+            <ul>
+            
+            {% if  perms.auth.user.delete_user %}
+                <button type="button" class="btn btn-primary">Delete User</button>
+            {% endif %}
+            </ul>
+        </p>
+    </div>
+{% endblock %}
