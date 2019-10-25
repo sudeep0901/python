@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+ 
+
+{% block content %}
+    <div class="container">
+    <form role="form"
+    action="{% url 'player_login' %}"
+    method="post">
+{% csrf_token %}
+    <p>Please login<p>
+        {{ form }}
+        <button type="submit" class="btn btn-success">Sign in</button>
+    </form>
+</div>
+
+{% if perms.auth.user.delete_user %}
+<button type="button" class="btn btn-primary">Delete User</button>
+{% endif %}
+{% endblock %}
+

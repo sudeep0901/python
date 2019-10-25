@@ -23,6 +23,6 @@ urlpatterns = [
     url(r'^player/', include('player.url')),
     # path(r'welcome', welcome),
     # url(r"^player/", include('player.urls')),
-    path(r'welcome', welcome), # rooturl
+    path(r'welcome', welcome),  # rooturl
 
 ]
