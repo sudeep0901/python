@@ -15,6 +15,7 @@ BLOG_ELEMENT_SEGEMENTS = (
     ('a', "Anchor"),
     ('br', "LineBreak"),
     ('code', "code"),
+    ('content', "content"),
 
 
 )
@@ -35,6 +36,8 @@ class Header(models.Model):
 class Details(models.Model):
     blog = models.ForeignKey(Header, on_delete=models.CASCADE)
     line_no = models.IntegerField(default=0)
+    image_title = models.CharField(max_length=100, default='Image', null=True)
+    images = models.ImageField(null=True, upload_to='images/', blank=True,)
     detail_element = models.CharField(
         max_length=100, choices=BLOG_ELEMENT_SEGEMENTS)
     element_text = models.TextField()
@@ -42,17 +45,17 @@ class Details(models.Model):
         'authors.User', on_delete=models.CASCADE)
     created_date = models.DateTimeField(
         "details_created_date", auto_now_add=True)
-    # created_by = models.CharField(max_length=100)
+    created_by = models.CharField(max_length=100)
 
-    def save(self, *args, **kwargs):
-        if self._state.adding:
-            last_id = self.objects.all().aggregate(
-                largest=models.Max('line_no'))['largest']
+    # def save(self, *args, **kwargs):
+    #     if self._state.adding:
+    #         last_id = self.objects.all().aggregate(
+    #             largest=models.Max('line_no'))['largest']
 
-            if last_id is not None:
-                self.blog_line_no = last_id + 1
+    #         if last_id is not None:
+    #             self.blog_line_no = last_id + 1
 
-        super(Details, self).save(*args, **kwargs)
+    #     super(Details, self).save(*args, **kwargs)
 
     def __str__(self):
         return "Blog Details:  " + self.blog.topic + " Line#:" + str(self.line_no)
