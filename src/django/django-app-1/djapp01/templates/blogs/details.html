@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="container">
+{% comment %} <h6 class=''>Welcome  {{user.username}}</h6> {% endcomment %}
+
+        {% for g in blog_details %}
+                {% comment %} {{g.line_no}} {% endcomment %}
+                {% if g.detail_element == 'h1' %}
+                    <h1>
+                     {{g.element_text}} </h1>
+                      {% comment %} {{ '<' + g.detail_element + '>'}} {{g.element_text}}   {{'</' + g.detail_element + '>'}}</td> {% endcomment %}
+                   <span>Author: {{g.created_by}} -  {{g.created_date}}</span> 
+                     {% comment %} {{g.line_no}} {% endcomment %}
+                {% endif %}
+                   {{ g.line_no}}
+                {% if g.detail_element == 'content' %}
+                        <p>{{g.element_text}} </p>
+                {% endif %}
+                {% if g.detail_element == 'img' %}
+                {{g.images}}
+                {% comment %} <img src="{{g.images}}" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" 
+                alt=""> {% endcomment %}
+
+                 {% endif %}
+                {% endfor %}
+            {% comment %} {% static 'images/1_Angular_CLI_image_N1lZ0mP.png' %}            {% endcomment %}
+            <ul>
+            
+            {% if  perms.auth.user.delete_user %}
+                <button type="button" class="btn btn-primary">Delete User</button>
+            {% endif %}
+            </ul>
+        </p>
+    </div>
+{% endblock %}
