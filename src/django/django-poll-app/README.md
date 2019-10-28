@@ -10,3 +10,7 @@ python manage.py makemigrations polls
 python manage.py sqlmigrate polls 0001
 python manage.py migrate
  python manage.py shell
+
+ coverage run --source=polls  manage.py test
+
+ coverage report -m
