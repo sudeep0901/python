@@ -9,8 +9,14 @@ python manage.py makemigrations polls
 
 python manage.py sqlmigrate polls 0001
 python manage.py migrate
- python manage.py shell
+python manage.py shell
+coverage run --source=polls  manage.py test
+coverage report -m
 
- coverage run --source=polls  manage.py test
+# PACKAGING DJANGO App for resue in other app
 
- coverage report -m
+setup tools
+1. First, create a parent directory for polls, outside of your Django project. Call this directory django-polls.
+2. Move the polls directory into the django-polls directory.
+3. Create a file django-polls/README.rst with the following contents:
+5. Create a django-polls/LICENSE file. 
