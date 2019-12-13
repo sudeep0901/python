@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+message Address {
+    string address = 1 [deprecated = true]; 
+    string address1 = 6;
+    string address2 = 5;
+    string city = 2;
+    string state = 3;
+    string zip_code = 4;
+}
