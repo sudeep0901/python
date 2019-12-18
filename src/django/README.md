@@ -54,3 +54,9 @@ Game.objects.filter(second_player__username='manasvi') # foriegn table
 # Shared layout (M Model T Template V View)
 
 
+Deployment
+-------------
+python3 manage.py check --deploy
+https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/ 
+
+

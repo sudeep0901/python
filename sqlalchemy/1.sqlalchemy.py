@@ -1,6 +1,6 @@
 import sqlalchemy as db
 
-engine = db.create_engine('mysql+mysqlconnector://root:admin@localhost:3306  /sakila')
+engine = db.create_engine('mysql+mysqlconnector://root:admin@localhost:3306/sakila')
 connection = engine.connect()
 results = engine.execute('SELECT * FROM actor LIMIT 10')
 print(results)

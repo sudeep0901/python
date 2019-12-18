@@ -3,7 +3,7 @@ print(0b1111)
 print(bin(15))
 print(bin(~0b1111))
 print(bin(-4))
-v = 0b11110000
+v = 0b111100
 print(v)
 
 v1 = ~v
