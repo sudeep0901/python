@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<h1>Books Home Page</h1>
+<form action="/books/create">
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+
+<table class='table'> 
+    {% if books %}
+    {% for book in books %}
+    <tr>
+        <td>
+
+            <p><a href="{% url 'detail' book.isbn %}">{{ book.name }}</a></p>
+            <!-- <li><a href="/books/{{ book.isbn}}/">{{ book.name }}</a></li> -->
+        </td>
+        <td>
+            <p><a class="btn btn-danger" href="{% url 'delete' book.isbn %}">Delete</a></p>
+
+        </td>
+
+    </tr>
+
+    {% endfor %}
+
+    {% else %}
+    <p>No Books are available.</p>
+    {% endif %}
+
+</table>
