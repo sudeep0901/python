@@ -16,3 +16,10 @@ os.urandom
 pip install flask-login
 pip install flask-sqlalchemy
 pip install flask_script
+pip install flask_debugtoolbar
+
+# Master below topics
+---------------------------
+bluprints
+config
+appfactories

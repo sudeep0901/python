@@ -1,4 +1,5 @@
-from thermos import app, db
+from flasks.thermos import app, db
+from flasks.thermos.models import User
 from flask_script import Manager, prompt_bool
 
 manager = Manager(db)
@@ -7,6 +8,8 @@ manager = Manager(db)
 @manager.command
 def initdb():
     db.create_all()
+    db.session.add(User(username="sudeep", email="sudeep@gmail.com"))
+    db.session.commit()
     print("Initialized the database")
 
 

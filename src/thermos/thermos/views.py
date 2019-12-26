@@ -1,21 +1,39 @@
+import os
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from logging import DEBUG
-from forms import BookMarkForm, LoginForm
+from flask_sqlalchemy import SQLAlchemy
+from thermos.forms import BookMarkForm, LoginForm
+from thermos.models import User, Bookmark
 
-app = Flask(__name__)
-app.logger.setLevel(DEBUG)
+from flask import (Flask, flash, redirect, render_template, request, session,
+                   url_for)
+from flask_login import login_manager, login_required
 
-app.config["SECRET_KEY"] = b'<\xfbx~te\x06\xcc2,+\x85\x15^\xec\x85\xe8\xd6\xf5\x8eC?\xbfB'
+bookmarks = []
+
+
+def store_bookmark(url, description):
+    bookmarks.append(dict(
+        url=url,
+        description=description,
+        user="sudeep",
+        date=datetime.utcnow
+    ))
+
+
+def new_bookmarks(num):
+    return sorted(bookmarks, key=lambda bm: bm['date'], reverse=True)[:num]
 
 
 @login_manager.user_loader
 def load_user(userid):
     return User.query.get(int(userid))
 
+
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template("index.html")
+    return render_template("index.html", new_bookmarks=models.Bookmark.newest(5))
 
 
 @app.route('/addold', methods=["GET", "POST"])
@@ -37,6 +55,10 @@ def add():
     if form.validate_on_submit():
         url = form.url.data
         description = form.description.data
+        # bm = Bookmark(url=url, description=description)
+        bm = models.Bookmark(url=url, description=description)
+        db.session.add(bm)
+        db.session.commit()
         print(url, description)
         flash("Stored url books is: {} ,{}".format(url, description))
         flash("Stored url books is: {} ,{}".format(url, description))
@@ -55,8 +77,9 @@ def user(username):
     user = User.query.filter_by(username=username).first_or_404
     return render_template('user.html', user=user)
 
+
 @app.route('/login', methods=["GET", "POST"])
-def login(username):
+def login():
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -66,6 +89,3 @@ def login(username):
             return redirect(request.args.get('next') or url_for('index'))
         flash("Incorrect usename or password")
     return render_template("login.html", form=form)
-
-if __name__ == "__main__":
-    app.run()

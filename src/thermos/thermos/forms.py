@@ -24,4 +24,4 @@ class LoginForm(Form):
     password = PasswordField('Please Enter Password:',
                              validators=[DataRequired()])
     remember_me = BooleanField('Keep me logged in')
-    submit = SubmitField('Login')
+    submit = SubmitField('Log in')
