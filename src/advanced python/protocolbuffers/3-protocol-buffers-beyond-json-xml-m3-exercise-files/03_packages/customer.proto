@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "address.proto";
+
+package consumerdata;
+
+message Customer {
+    string username = 1;
+    repeated string email_addresses = 2;
+    CustomerType type = 3;
+    Address address = 4;
+}
+
+enum CustomerType {
+    REGULAR = 0;
+    MEMBER = 1;
+    SPONSOR = 2;
+}

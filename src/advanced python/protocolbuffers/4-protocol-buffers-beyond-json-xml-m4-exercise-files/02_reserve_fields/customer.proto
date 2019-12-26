@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+message Customer {
+    // string full_name = 1;
+    string username = 2;
+    string full_name = 3;
+
+    reserved 1;
+    reserved "full_name";
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+package consumerdata;
+
+message Address {
+    string address = 1;
+    string city = 2;
+    string state = 3;
+    string zip_code = 4;
+}
