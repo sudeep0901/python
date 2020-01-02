@@ -1,4 +1,4 @@
-%matplotlib inline
+# %matplotlib inline
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -21,13 +21,13 @@ plt.scatter(x, y)
 plt.plot(x, yfit)
 
 
-# It's clear that we need a more sophisticated model to describe the relationship between x and y.
-
+# It's clear that we need a more sophisticated model to 
+# describe the relationship between x and y.
 # One approach to this is to transform the data, adding extra columns of features to drive more flexibility in the model. For example, we can add polynomial features to the data this way:
 
 from sklearn.preprocessing import PolynomialFeatures
 
-poly = PolynomialFeatures(degree=3, include_bias=False)
+poly = PolynomialFeatures(degree=2, include_bias=False)
 
 X2 = poly.fit_transform(X)
 
@@ -37,4 +37,5 @@ model = LinearRegression().fit(X2, y)
 yfit =model.predict(X2)
 
 plt.scatter(x, y)
-plt.plot(x, yfit);
+plt.plot(x, yfit)
+plt.show()

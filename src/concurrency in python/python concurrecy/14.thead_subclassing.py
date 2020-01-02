@@ -17,4 +17,4 @@ class MyThread(threading.Thread):
 
 for i in range(5):
     t = MyThread()
-    t. start()
+    t.start()

@@ -1,6 +1,6 @@
 import pandas as pd
 
-movies_df = pd.read_csv(r"D:\github\python\src\pandas\data\movie.csv")
+movies_df = pd.read_csv(r"..\data\movie.csv")
 print(movies_df.head())
 
 print(movies_df.director_name)
