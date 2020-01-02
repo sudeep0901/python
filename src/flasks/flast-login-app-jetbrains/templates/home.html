@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask User App</title>
+</head>
+{% block metarefresh %} <meta http-equiv="refresh" content="10" > {%
+endblock %}
+<body>
+<form action="/login" method="post">
+    <input type="email" name="email" id="email">
+    <input type="password" name="password" id="password">
+    <input type="submit" value="Login">
+</form>
+
+</body>
+</html>

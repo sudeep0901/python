@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register User</title>
+</head>
+<body>
+<h1>Register User</h1>
+<!--<form action="/register" method="post">-->
+<!--    <input type="email" name="email" id="email">-->
+<!--    <input type="password" name="password" id="password">-->
+<!--    <input type="password" name="password2" id="password2">-->
+<!--    <input type="submit" value="Register">-->
+<!--</form>-->
+
+{% block content %}
+<form action="/register" method="post">
+    {% if registrationform.email.errors %}
+<ul class="errors">{% for error in
+registrationform.email.errors %}<li>{{ error }}</li>
+{% endfor %}</ul>
+{% endif %}
+    {{ registrationform.csrf_token }}
+    {{ registrationform.email() }}
+    {{ registrationform.password() }}
+    {{ registrationform.password2() }}
+    {{ registrationform.submit() }}
+    {{ registrationform.background_color }}
+</form>
+{% endblock %}
+</body>
+</html>
