@@ -1,21 +1,24 @@
 class A():
-        def sd(self):
-                print("I am in class A")
-                print(self.__dict__)
-                
+    def sd(self):
+        print("I am in class A")
+        print(self.__dict__)
 
 
 class B():
-        def sd(self):
-                print("I am in class B")
-                print(self.__class__)
+    def sd(self):
+        print("I am in class B")
+        print(self.__class__)
 
-class C(A): 
-    def sd(self): 
+
+class C(A):
+    def sd(self):
         print("In class C")
 
-class D(B,C):
-        pass
+
+class D(B, C):
+    pass
+
+
 b = B()
 
 b.sd()

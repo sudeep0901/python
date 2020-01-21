@@ -28,3 +28,10 @@ cob = callableObject()
 
 # cob()
 print(dir(cob))
+def passstr(string):
+    string = "Hello0"
+    return string
+
+string ="1234"
+print(passstr(string))
+print(string)

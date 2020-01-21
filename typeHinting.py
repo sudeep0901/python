@@ -1,4 +1,5 @@
-# type hinting new feture for editors but still it is dynamic at runtime
+# type hinting new feture for editors 
+# but still it is dynamic at runtime
 def add_numbers(a: int, b: int) -> int:
     return a + b
 
