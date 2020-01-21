@@ -1,5 +1,9 @@
-# Because the args and kwargs values passed to the Thread constructor are saved in private variables, they are not easily accessed from a subclass. 
-# To pass arguments to a custom thread type, redefine the constructor to save the values in an instance attribute that can be seen in the subclass.
+# Because the args and kwargs values passed to 
+# the Thread constructor are saved in private variables,
+#  they are not easily accessed from a subclass. 
+# To pass arguments to a custom thread type, 
+# redefine the constructor to save the values in 
+# an instance attribute that can be seen in the subclass.
 import threading
 import logging
 
