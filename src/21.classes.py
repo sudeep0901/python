@@ -8,6 +8,7 @@ import datetime
 import time
 import dateutil
 
+
 class Employee(object):
     classvariable = "I am global"
 
@@ -25,8 +26,9 @@ class Employee(object):
         self.lname = lname
 
     def printfullname(self):
-        self.fullname = self.fname + " "  + self.lname
+        self.fullname = self.fname + " " + self.lname
         return self.fullname
+
 
 employee = Employee("sudeep", "patel")
 employee1 = Employee("sudeep", "patel")
@@ -43,20 +45,21 @@ print(employee.classvariable)
 print(employee1.classvariable)
 print(employee.__dict__)
 
-class EvilEmployee(Employee): #Inheritance
+
+class EvilEmployee(Employee):  # Inheritance
     def __init__(self, fname, lname, evilFactor):
-        super().__init__(fname, lname) #when init defined in derived class, 
-        #super class init must be called explicityly
+        super().__init__(fname, lname)  # when init defined in derived class,
+        # super class init must be called explicityly
         self.evilFactor = evilFactor
 
     def evil(self):
         return self.evilFactor
-    
+
     @staticmethod
     def now():
         t = time.localtime()
         return Date(t.tm_year, t.tm_mon, t.tm_day)
-        
+
     @staticmethod
     def tomorrow():
         t = time.localtime(time.time()+86400)
@@ -65,7 +68,7 @@ class EvilEmployee(Employee): #Inheritance
 
 eve = EvilEmployee("Sudeep", "Patel", "No")
 
-print(eve.evil(),eve.printfullname())
+print(eve.evil(), eve.printfullname())
 employee.checemployee()
 EvilEmployee.now()
 # For any given class, the ordering of base classes can be viewed by printing

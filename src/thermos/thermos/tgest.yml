@@ -1,0 +1,10 @@
+server:
+    port: 8888
+spring:
+    profiles:
+        active: default
+    cloud:
+        config:
+            server:
+                native:
+                    searchLocations: file:\\\C:\github\\github\\java\\spring-cloud-config-server\\spring-clould-config-server\\src\\main\\resources\\config
