@@ -37,7 +37,13 @@ mv[1] = 90
 print('After updation:', random_byte_array)
 
 t0 = pc()
-for i in range(1000000000):
+for i in range(100000000):
     pass
 
 print(pc() - t0)
+
+
+# mixed bag sequeence
+l1 = [28, 14, '28', 5, '9', '1', 0, 6, '23', 19]
+sl = sorted(l1, key=int)
+print(sl)
