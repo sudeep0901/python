@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}
+Thermos -- Welcome
+{%  endblock %}
+
+{% block content %}
+    <h1>Mozilla is cool</h1>
+    <img src="../static/images/firefox-icon.png" alt="The Firefox logo: a flaming fox surrounding the Earth.">
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      {% for message in messages %}
+    <h2> {{message }}
+    </h2>
+
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+
+
+    <p>At Mozilla, we’re a global community of</p>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+    <ul> <!-- changed to list in the tutorial -->
+      <li>technologists</li>
+      <li>thinkers</li>
+      <li>builders</li>
+    </ul>
+ <article>
+    <header>
+        <h1>Welcome</h1>
+        <p>Thermos is a simple social bookmarking site. Or actually, it is a demo for the <a href="#">Pluralsight</a> course titled <i>Flask Fundamentals.</i></p>
+    </header>
+    <section>
+        <h2>Recently Added</h2>
+        {% if new_bookmarks %}
+            <ul>
+                {% for bm in new_bookmarks %}
+                    <li><a href="{{ url_for('user', username=bm.user.username) }}">{{ bm.user.username }}</a> added <a href="{{ bm.url }}">{{ bm.url }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            No bookmarks yet.
+        {% endif %}
+    </section>
+</article>
+    <p>working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
+
+    <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of our mission.</p>
+{% endblock %}
