@@ -38,5 +38,5 @@ parser = xml.sax.make_parser()
 handler = BookHandler()
 parser.setContentHandler(handler)
 
-parser.parse("/home/sudeep/sources/github/pythongithub/src/xml-python/data/catelog.xml")
+parser.parse("./data/catelog.xml")
 pprint.pprint(handler.mapping)

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<profiles>
+    <profile>
+        <userid admin="True">sudeeppatel</userid>
+        <firstname>Sudeep</firstname>
+        <lastname>Patel</lastname>
+        <country>India</country>
+    </profile>
+    <profile>
+        <userid admin="True">sudeeppatel</userid>
+        <firstname>Sudeep</firstname>
+        <lastname>Patel</lastname>
+        <country>India</country>
+    </profile>
+</profiles>

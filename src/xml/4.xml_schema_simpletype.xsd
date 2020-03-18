@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xs:Schema xmlns:xs= "Schema112">
+    <xs:element name="Address">
+        <xs:ComplexType>
+            <xs:Sequence>
+                <xs:element name="Name" type="xs:string"></xs:element>
+                <xs:element name="Phone" type="xs:int"></xs:element>
+            </xs:Sequence>
+        </xs:ComplexType>
+    </xs:element>
+</xs:Schema>

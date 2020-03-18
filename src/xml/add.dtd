@@ -1,0 +1,20 @@
+<!-- External DTD -->
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- External DTD -->
+<!ENTITY mycompany SYSTEM "Javelin">
+<!ATTLIST element-name attribute-name ID #REQUIRED>
+
+<!DOCTYPE Address [
+    <!ELEMENT Address (name, company, phone)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT company (#PCDATA)>
+    <!ELEMENT phone (#PCDATA)>
+]>
+
+
+<Address>
+    <name>Sudeep Patel</name>
+    <company>Personal</company>
+    <phone>1234567890</phone>
+</Address>
