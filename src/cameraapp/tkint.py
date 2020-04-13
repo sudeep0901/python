@@ -1,6 +1,6 @@
-# sudo apt-get install python-imaging-tk
-# pip instlal Pillow
+# # pip instlal Pillow
 # sudo pip3 install pillow --upgrade
+# pip install opencv-python
 
 import numpy as np
 import cv2
